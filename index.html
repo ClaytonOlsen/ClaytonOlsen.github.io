@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clayton Olsen Portfolio</title>
+		<style>
+			body {
+				transform: scale(0.80); /* Scale the content */
+				transform-origin: top middle; /* Set the origin for scaling */
+				width: 100%; /* Compensate for the scaling */
+				overflow-x: hidden; /* Prevent horizontal scrolling */
+			}
+		</style>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<div class="text-and-photo">
+							<div class="text-content">
+								<h1>Hi Clay here 👋</h1>
+								<p style="font-size: 0.8em;">27 year old data scientist in the Bay Area, CA</p>
+								<a href="images/Clay Olsen Resume.pdf" download="Clay Olsen Resume.pdf" class="button">
+									<p>Resume
+									<img src="images/download_icon.png" style="width: 20%; height: auto;" alt="Download Icon" class="icon"></p>
+								</a>
+								<a href="https://www.linkedin.com/in/clayton-olsen/" class="button">
+									<img src="images/linkedin_icon.png" alt="LinkedIn Icon">
+								</a>
+								<a href="https://github.com/ClaytonOlsen" class="button">
+									<img src="images/github_icon.png"  alt="Github Icon">
+								</a>
+								<a href="mailto:clay.olsen1@gmail.com" class="button">
+									<img src="images/gmail.png"  alt="Email Icon">
+								</a>
+							</div>
+							
+							<div class="photo-content">
+								<img src="images/face.png" alt="Profile Photo">
+							</div>
+						</div>
+							<style>
+								 .text-and-photo {
+									display: flex;
+									justify-content: space-between;
+									align-items: center; /* Aligns text with the top of the image */
+									max-width: 1000px; /* Ensures it doesn't exceed 1000px */
+									margin: 0 auto; /* Center the container */
+									padding: 20px; /* Optional: Adds some padding around */
+								}
+
+								.text-content {
+									flex: 1; /* Text takes available space */
+									padding-right: 20px; /* Space between text and photo */
+									text-align: left; /* Ensures text is left-aligned */
+								}
+
+								.photo-content img {
+									max-width: 300px; /* Set a max width for the image */
+									height: auto; /* Maintain aspect ratio */
+								}
+
+								body {
+									font-family: Arial, sans-serif;
+									text-align: center;
+									margin: 20px;
+								}
+								.header {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									margin-bottom: 20px;
+								}
+								.icon {
+									margin: 0; /* Reset any margin that could cause overflow */
+									padding: 0; /* Reset padding if necessary */
+									vertical-align: middle;
+									display: inline; 
+									font-size: 1.2em; /* Adjust icon size to match text */
+								}
+								.button {
+									display: inline-block;
+									align-items: center;
+									max-width: 150px;
+									padding: 5px 10px; /* Smaller padding for smaller buttons */
+									color: white;
+									line-height: 1.5;
+									background-color: #323249;
+									border: none;
+									border-radius: 5px;
+									text-decoration: none;
+									margin: 10px; /* Smaller margin */
+									font-size: 16px; /* Smaller font size */
+									transition: transform 0.2s, background-color 0.2s;
+									overflow: visible;
+								}
+								.button:hover {
+									transform: scale(1.05);
+									background-color: #333;
+									
+								}
+								.button img {
+									vertical-align: middle;
+									margin-bottom:0px;
+									/*background-color: white;*/
+									width: 35px; /* Adjust icon size for smaller buttons */
+									height: 35px;
+								}
+							</style>
+							
+						
+					</header>
+
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>Tab Example</title>
+					<style>
+						/* Style the tab */
+						.tab {
+							display: flex;
+							flex: 1;
+							background-color: inherit;
+    						border-bottom: 2px solid #404250;
+							justify-content: space-between;
+							width: 1000px;
+							margin: 0 auto;
+							/*border: 5px solid #03061a;  Shared thick border */
+							border-radius: 10px;
+						}
+						.tab-container {
+							border: none;
+							overflow: hidden; /* Prevent content from overflowing */
+							gap: 5px; /* Space between tabs */
+						}
+					
+						/* Style the buttons inside the tab */
+						.tab button {
+							background-color: inherit;
+							border: none;
+							outline: none;
+							padding: 14px 16px;
+							cursor: pointer;
+							flex-grow: 1;
+							text-align: center;
+							font-family: inherit; /* Makes the font match the text */
+							font-size: 24px; /* Increase the font size */
+							color: white; /* Makes the text white */
+							font-weight: bold;
+							transition: background-color 0.3s; /* Smooth background color change */
+						}
+					
+						/* Change background color of the active tab */
+						.tab button.active {
+							background-color: #2d2d4d;
+						}
+					
+						.tab-panel {
+							position: absolute; /* Position each panel absolutely */
+							width: 1100px; /* Full width */
+							opacity: 0; /* Start as invisible */
+							transition: opacity 0.5s ease; /* Fade animation */
+							height: 100px; /* Fixed height for example purposes */
+						}
+
+						.tab-panel.active {
+							opacity: 1; /* Fully visible */
+						}
+					</style>
+				
+				</head>
+				<body>
+				
+					<!-- Tab Titles -->
+					<div class="tab">
+						<button class="tablinks active" onclick="openTab(event, 'Tab1')">Experience</button>
+						<button class="tablinks" onclick="openTab(event, 'Tab2')">Education</button>
+					</div>
+					  <script src="script.js"></script>
+				
+					<!-- Tab Content -->
+					<div id="Tab1" class="tabcontent" style="display: block;">
+						<div class="experience-section">
+							<!-- Vertical line spans the entire section <div class="vertical-line"></div> -->
+							
+							<div class="experience">
+								<div class="company-logo-container">
+									<img src="images/falkonry.png" class="company-logo" alt="Company 1">
+								</div>
+								<div class="experience-details">
+									<p style="font-size: 0.8em;">Nov 2021 - May 2024</p>
+									<h3>Falkonry</h3>
+									<p>Software Engineer, ML Engineering Team</p>
+									<p style="font-size: 0.7em;">
+										<ul>
+										<li>Built 100’s of classification and anomaly detection models to provide warnings and real time feedback for a variety of customer use cases that require deliberation on optimal algorithm selection, hyper-parameter tuning, variable selection, and data cleansing techniques to be applied.</li>
+										<li>Developed and optimized the code pipeline for machine learning products </li>
+										<li>Presented machine learning use cases and collaborated with customers to address a variety of industry needs using Falkonry’s AI platform</li>
+										<li>Utilized AWS cloud platform tools such as boto3, S3, Rancher, Kubernetes, and Docker for the management of a machine learning pipeline for experimental neural network models and product code contributions</li>
+										<li>Developed and implemented geographical models for density estimation and predictive object tracking that was visualized in Kepler using H3 grid data</li>
+										<li>Wrote Python code and used Rest API for automating data engineering tasks, generating reports for sharing findings with customers, and other automatable tasks within a developing application</li>
+
+									</ul></p>
+
+									
+								</div>
+							</div>
+					
+							<div class="experience">
+								<div class="company-logo-container">
+									<img src="images/sparta_science.png" class="company-logo" alt="Company 2">
+								</div>
+								<div class="experience-details">
+									<p style="font-size: 0.8em;">June 2020 - Nov 2021</p>
+									<h3>Sparta Science</h3>
+									<p>Data Science Team Intern</p>
+									<p style="font-size: 0.7em;">
+										<ul>
+										<li>Built Keras NN models for both classification and regression purposes on time-series data</li>
+										<li>Computed reliability and performance metrics with data collected from athlete force plate tests</li>
+										<li>Used Python and R for development of the company’s performance metric and data calculation pipeline</li>
+									</ul></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				
+					<div id="Tab2" class="tabcontent">
+						<div class="experience-section"></div>
+						 <!-- Vertical line spans the entire section <div class="vertical-line"></div>-->
+
+							<div class="experience">
+								<div class="company-logo-container">
+									<img src="images/ucsc.png" class="company-logo" alt="ucsc">
+								</div>
+							<div class="experience-details">
+								<p style="font-size: 0.8em;">Sep 2019 - June 2021</p>
+								<h3>University of California Santa Cruz</h3>
+								<p>M.S. Statistical Science</p>
+									<p style="font-size: 0.7em;">
+										<ul>
+										<li><a href="https://github.com/ClaytonOlsen/A-Bayesian-Bivariate-Probit-Model-For-Phase-I-II-Dose-Finding-Trials" target="_blank">Capstone Project:</a>  Implemented Bayesian methodology to study trade-offs between efficacy and toxicity to find the dose level that optimizes a utility function in a variety of simulated experiments</li>
+										<li>Cumulative GPA: 3.5</li>
+										</ul></p> 
+								</div>
+							</div>
+						
+
+						<div class="experience">
+							<div class="company-logo-container">
+								<img src="images/Seattle_University.png" class="company-logo" alt="Seattle_University">
+							</div>
+							<div class="experience-details">
+								<p style="font-size: 0.8em;">Sep 2019 - June 2021</p>
+								<h3>Seattle University</h3>
+								<p>B.A. Business Analytics</p>
+								<p style="font-size: 0.7em;">
+									<ul>
+									<li>Seattle University, Seattle, WA</li>
+									<li>Major GPA: 3.625     Cumulative GPA: 3.528</li>
+									<li>Albers Business School Dean’s list, Bellarmine Scholarship recipient, Cum Laude</li>
+								</ul></p> 
+								
+							</div>
+							</div>
+						</div>
+					</div>
+				
+				
+
+					
+
+
+					<style>
+				
+							.tabcontent {
+								border: 1px solid #404250; /* Thick border around the entire tab */
+								background-color: #0b080800;
+								margin: 10px auto; /* Center the element by setting left and right margins to auto */
+								text-align: left;
+								width: 1000px; /* Fixed width */
+								display: none; /* Ensure it's treated as a block element */
+								padding: 20px; /* Padding inside content area */
+								overflow: auto;
+								box-sizing: border-box; /* Include padding and border in width */
+								border-radius: 10px; /* Same or different value for roundness */
+							}
+							/* Ensure .experience is consistently sized */
+							.experience {
+								display: flex;
+								align-items: center;
+								margin-bottom: 20px;
+								position: relative; /* Ensure the vertical line is positioned relative to this container */
+								z-index: 1;
+								min-height: 150px; /* Set a consistent height */
+							}
+
+							/* Adjust logo container */
+							.company-logo-container {
+								width: 70px;
+								margin-right: 20px;
+								position: relative; /* Ensure the vertical line positions relative to this */
+								z-index: 1;
+							}
+
+							/* Vertical line stays centered within the logo container */
+							.vertical-line {
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								left: 50px; /* Fixed position for vertical line */
+								transform: translateX(-50%);
+								width: 2px;
+								background-color: #ccc;
+								z-index: 0;
+							}
+
+							.experience-section {
+								display: flex;
+								flex-direction: column;
+								width: 100%; /* Ensure full width */
+								padding-left: 0; /* Remove any unwanted padding */
+								margin-left: 0; /* Remove any unwanted margin */
+								position: relative;
+							}
+
+							.company-logo {
+								width: 80px;
+								height: auto;
+								flex-shrink: 0;
+								margin-right: 50px; /* Adjust this value to a more reasonable size */
+								position: relative;
+							}
+
+							.experience-details {
+								flex-grow: 1;
+								padding: 10px;
+								background-color: #ffffff00;
+								z-index: 1;
+							}
+							.experience-details h3, .experience-details p {
+								margin: 0;
+								padding-left: 0;
+								margin-left: 0;
+							}
+
+
+				</style>
+				
+					<script>
+						function openTab(evt, tabName) {
+						  // Hide all tab content
+						  var tabContent = document.getElementsByClassName("tabcontent");
+						  for (var i = 0; i < tabContent.length; i++) {
+							tabContent[i].style.display = "none";
+						  }
+					  
+						  // Remove the "active" class from all tab buttons
+						  var tabLinks = document.getElementsByClassName("tablinks");
+						  for (var i = 0; i < tabLinks.length; i++) {
+							tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+						  }
+					  
+						  // Show the selected tab's content and add the "active" class to the clicked tab button
+						  document.getElementById(tabName).style.display = "block";
+						  evt.currentTarget.className += " active";
+						}
+					  
+						// Set the first tab as default when page loads
+						document.addEventListener("DOMContentLoaded", function() {
+						  document.getElementById("defaultOpen").click();
+						});
+					  </script>
+				
+
+
+
+
+
+
+
+
+
+				<head>
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>Featured Projects</title>
+					<style>
+						/* Style for the title and the view more button inline */
+						.projects-header {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							
+							margin-bottom: 40px;
+							max-width: 1000px; /* Ensures it matches the width of the featured projects */
+							margin: 0 auto; /* Center the header */
+						}
+				
+						.projects-header h2 {
+							margin: 0;
+							font-size: 1.8em;
+							margin-bottom: 10px;
+							margin-top: 10px;
+						}
+				
+						.view-more {
+							margin: 0;
+						}
+				
+						.view-more button {
+							padding: 10px 20px;
+							background-color: #3d415b;
+							color: white;
+							border-radius: 5px;
+							border: none;
+							cursor: pointer;
+							transition: background-color 0.3s ease;
+						}
+				
+						.view-more button:hover {
+							background-color: inherit;
+						}
+				
+						/* Style for the featured projects section */
+						.featured-projects {
+							display: flex;
+							flex-wrap: wrap;
+							gap: 20px;
+							justify-content: space-between;
+							max-width: 1000px; /* Matches the width of your .tabcontent */
+							margin: 0 auto; /* Center the section */
+						}
+				
+						/* Style for individual project boxes */
+						.project-box {
+							width: calc(50% - 20px); /* Ensures two boxes per row */
+							border: 1px solid #404250;
+							border-radius: 10px;
+							padding: 15px;
+							background-color: #efefef;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+							cursor: pointer;
+							transition: transform 0.3s ease;
+						}
+				
+						/* Hover effect for the project boxes */
+						.project-box:hover {
+							transform: scale(1.05);
+						}
+				
+						/* Style for project title */
+						.project-title {
+							font-size: 1em;
+							margin-bottom: 10px;
+							color: #555;
+							text-align: left;
+						}
+				
+						/* Style for project description */
+						.project-description {
+							font-size: 0.5em;
+							color: #555;
+							margin-bottom: 15px;
+							display: -webkit-box;          /* Enable flex behavior for multi-line text */
+							-webkit-line-clamp: 8;         /* Number of lines before ellipsis */
+							-webkit-box-orient: vertical;  /* Vertical orientation for lines */
+							overflow: hidden;              /* Hide the overflowing text */
+							text-overflow: ellipsis;       /* Display ellipsis (...) for overflow */
+							text-align:left;
+							white-space: normal;           /* Allow line breaks */
+							height: 150px;
+						}
+				
+						/* Style for project thumbnail image */
+						.project-thumbnail {
+							width: 100%;
+							height: 150px;
+							object-fit: cover;
+							border-radius: 5px;
+						}
+				
+						/* Hide additional projects initially */
+						.hidden {
+							display: none;
+						}
+					</style>
+				</head>
+				<body>
+				
+					<div class="projects-header">
+						<h2>Featured Projects</h2>
+						<div class="view-more">
+							<a id="viewMoreBtn" >view more &#8594;</a>
+						</div>
+					</div>
+
+
+					<section class="featured-projects">
+						<div class="project-box" onclick="window.open('https://github.com/ClaytonOlsen/A-Bayesian-Bivariate-Probit-Model-For-Phase-I-II-Dose-Finding-Trials', '_blank')">
+							<img src="images/doseLeveling.png" alt="Capstone" class="project-thumbnail">
+							<h3 class="project-title">A Bayesian Bivariate Probit Model For Phase I-II Dose Finding Trials</h3>
+							<p class="project-description">A single model-based, early-phase trial design can be utilized to simultaneously account for efficacy and toxicity. We used a bivariate probit design to model the binary outcomes of efficacy and toxicity under a Bayesian framework while accounting for potential dependencies between dose-efficacy and dose-toxicity. We evaluate dose levels with an intuitive utility function, proposed in Liu and Johnson [2016], that accounts for desired trade-offs between efficacy and toxicity.</p>
+						</div>
+				
+						<div class="project-box" onclick="window.open('https://github.com/ClaytonOlsen/HaikuTransformer', '_blank')">
+							<img src="images/HaikuProject.png" alt="Haiku Project" class="project-thumbnail">
+							<h3 class="project-title">Haiku Transformer</h3>
+							<p class="project-description">This repository contains a transformfer model following the infrastrucutre presented in Attention is All You Need paper to produce lines of text in the form of 3 line poems from scratch. The dataset used was statworx/haiku from huggingface. The dataset consists of mostly haikus in the 5-7-5 syllable structure, but there are many unstructured 3 line poems in the mix.
+							</p>
+						</div>
+				
+						<!-- Additional project boxes that are hidden initially -->
+						<div class="project-box hidden" onclick="window.open('https://github.com/ClaytonOlsen/Style_Transfer/tree/main', '_blank')">
+							<img src="images/style_transfer.png" alt="Style Transfer" class="project-thumbnail">
+							<h3 class="project-title">Style Transfer</h3>
+							<p class="project-description">Includes both a individual use case style transfer model and a fast style transfer model training to quickly change images to the style of Starry Night. The first model is implemented by optimizing an output image to match the content statistics if the content image and the style statistics of the style reference image which are extracted from the images using the intermediatary layers of Convolution Neural Network. The vgg19 model, used in this example, is trained to understand an input image and generalize its invariances and defining features within classes, ignoring potential background noise. The trained model uses vgg19 model to train a feed-forward network for image style transfer using a single style reference image.</p>
+						</div>
+				
+						<div class="project-box hidden" onclick="window.open('https://github.com/ClaytonOlsen/Grouped_Variable_Reduction', '_blank')">
+							<img src="images/groupLasso.png" alt="Project 4" class="project-thumbnail">
+							<h3 class="project-title">Model selection and estimation in regression with grouped variables</h3>
+							<p class="project-description">Sometimes, we have variables that seem linked in structure. In these models, we can express these linked variables as a group of input variables. The most common example of this is with multi-factor analysis of variance (ANOVA) models, where a factor with several levels will be expressed through multiple dummy variables. We would aim to select the important variables and interactions necessary for accurate prediction. Also in additive models, we often have polynomial and non-parametric variables. In these models, we would select important groups of basis functions. In these situations, variable selection generally amounts to the selection of important factors, not just the individual input variables. It is useful to group input variables of the same factor for eventual analysis in these situations.
+
+								Traditional selection methods for these cases include best subset and stepwise procedures. The problem with these kinds of procedures is that they do not have a piece-wise linear solution path, so they are computationally expensive. Some methods such as lasso and least angle regression selection (LARS), have piece-wise linear solution paths, but are more tailored towards identifying individually important variables rather than groups of variables. This paper presents three methods tailored towards grouped variables selection: Group Lasso, Group LARS, and Group Non-negative Garrote (NNG). These methods treat variables in a grouped setting, while utilizing their computational efficiency and reliable accuracy under certain circumstances.</p>
+						</div>
+
+						<div class="project-box hidden" onclick="window.open('https://github.com/ClaytonOlsen/credit_card_fraud', '_blank')">
+							<img src="images/credit card fraud.jpeg" alt="Credit Card Fraud" class="project-thumbnail">
+							<h3 class="project-title">Credit Card Fraud Detection</h3>
+							<p class="project-description">It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase. In this project, we aim to classify credit card purchases as fraudulent or non-fraudulent based on credit card purchase data found on kaggle. We will fit a variety of ML models to see what performs best based on criterion that favors decreasing false negatives as they are most crucial in fraud detection with imbalanced data.
+							</p>
+						</div>
+
+						
+
+					</section>
+				
+					<script>
+						// JavaScript to toggle the visibility of more projects
+						document.getElementById('viewMoreBtn').addEventListener('click', function() {
+							const hiddenProjects = document.querySelectorAll('.hidden');
+							hiddenProjects.forEach(function(project) {
+								// Toggle the 'hidden' class on each additional project
+								project.style.display = project.style.display === 'none' || project.style.display === '' ? 'block' : 'none';
+							});
+					
+							// Toggle button text between "View More" and "View Less"
+							if (this.textContent.includes('View More')) {
+									this.innerHTML = 'view less &#8592;'; // Change to View Less with left arrow
+								} else {
+									this.innerHTML = 'view more &#8594;'; // Change to View More with right arrow
+								}
+						});
+					</script>
+				
+				</body>
+
+
+
+
+
+				<!-- --------------------------------------------------  -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
