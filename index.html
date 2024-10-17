@@ -557,11 +557,11 @@
 							});
 					
 							// Toggle button text between "View More" and "View Less"
-							if (this.textContent.includes('View More')) {
-									this.innerHTML = 'view less &#8592;'; // Change to View Less with left arrow
-								} else {
-									this.innerHTML = 'view more &#8594;'; // Change to View More with right arrow
-								}
+							if (this.innerHTML.toLowerCase().includes('view more')) {
+								this.innerHTML = 'view less &#8592;'; // Set to View Less with left arrow
+							} else {
+								this.innerHTML = 'view more &#8594;'; // Set to View More with right arrow
+							}
 						});
 					</script>
 				
