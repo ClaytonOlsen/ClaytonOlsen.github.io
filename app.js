@@ -58,7 +58,7 @@ class Chatbox {
         // Clear the input field immediately after sending the message
         textField.value = ''; 
     
-        let name = 'AIzaSyC9DqE3-wkznF_2nDIxeXs3rWCO8bCmb7k';
+        let name = 'AIzaSyCx5MyWu-JmyB8HAdh_GkpCvJIfRLtYknE';
         
         fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${name}`, {
             method: 'POST',
