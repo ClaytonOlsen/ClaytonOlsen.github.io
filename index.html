@@ -562,6 +562,351 @@
 					</script>
 				
 				</body>
+			
+			
+			<!-- HTML code for chatbot -->
+
+			<div id= chatbotContainer class="container">
+				<div class="chatbox">
+					<div id="chatboxSupport" class="chatbox__support">
+						<div class="chatbox__header">
+							<div class="chatbox__image--header">
+								<img src="images/claptrapToken.png" class="resize-img" alt="image">
+							</div>
+							<div class="chatbox__content--header">
+								<h4 class="chatbox__heading--header">Chat support</h4>
+								<p class="chatbox__description--header">Hi. My name is Claybot1. How can I help you?</p>
+							</div>
+						</div>
+						<div id="chatboxMessages" class="chatbox__messages">
+							<div>
+								<!-- ChatGPT messages and user input will go here -->
+							</div>
+						</div>
+						<div class="chatbox__footer">
+							<input type="text" placeholder="Ask Something...">
+							<button class="chatbox__send--footer send__button">Send</button>
+						</div>
+					</div>
+					<div >
+						<button class="chatbox__button">
+								<span class="chat-large-text">🟢 Clay's Chat Support</span>
+								<span class="arrow">&#x25BC;</span>
+						</button>
+						
+					</div>
+				</div>
+			</div>
+			<style>
+				#chatbotContainer * {
+					box-sizing: border-box;					
+					bottom: 30px; /* Distance from the bottom */
+					right: 30px; /* Distance from the right */
+					z-index: 999; /* Ensure it stays on top of other elements */
+					
+				}
+				.resize-img {
+					width: 50px;
+					height: 50px;
+				}
+				#chatbotContainer .chatbox__button > * {
+					pointer-events: none; /* Prevent child elements from receiving hover events */
+				}
+				
+				/* Button styling */
+				#chatbotContainer .chatbox__button {
+					display: flex;
+					align-items: center;
+					background-color: #323249;
+					border-radius: 10px;
+					border: 1px solid white;
+					cursor: pointer;
+					color: white;
+					width: 300px;
+					outline: none; 
+					box-shadow: none;
+					text-align: center;
+					justify-content: space-between; /* This will space out the contents evenly */
+				}
+				#chatbotContainer .chatbox__button:hover,
+				#chatbotContainer .chatbox__button:focus {
+					outline: none; /* Removes the focus outline on hover */
+					background-color: inherit; /* Ensures the background doesn't change */
+					box-shadow: none; /* Removes any browser-added shadow */
+					transform: scale(1.05);
+					background-color: #333; /* Change to dark on hover */
+				}
+
+				/* Small text "Chat with" */
+				#chatbotContainer .chat-small-text {
+					font-size: 12px; /* Smaller font for "Chat with" */
+					color: white;
+					display: block;
+					text-align: left;
+				}
+
+				#chatbotContainer .chat-large-text {
+					padding: 0; /* Ensure no padding here */
+					margin: 0; /* Ensure no margin here */
+					font-size: 16px; /* Larger font for "🟢 Clay Support" */
+					color: white;
+					font-weight: bold;
+					text-align: left;
+					display: block;
+				}
+				/* Arrow styling */
+				#chatbotContainer .arrow {
+					font-size: 16px;
+					transition: transform 0.3s ease;
+					text-align: right;
+				}
+			
+
+				#chatbotContainer body {
+					font-family: 'Nunito', sans-serif;
+					font-weight: 400;
+					font-size: 100%;
+					background: #F1F1F1;
+				}
+
+				#chatbotContainer *, html {
+					--primaryGradient: linear-gradient(93.12deg, #323249 0.52%, #323249 100%);
+					--secondaryGradient: linear-gradient(268.91deg, #323249 -2.14%, #323249 99.69%);
+					--primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+					--secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+					--primary: #323249;
+				}
+
+				/* CHATBOX
+				=============== */
+				#chatbotContainer .chatbox {
+					position: absolute;
+					bottom: 30px;
+					right: 30px;
+				}
+
+				/* CONTENT IS CLOSE */
+				#chatbotContainer .chatbox__support {
+					display: flex;
+					flex-direction: column;
+					background: #eee;
+					width: 300px;
+					height: 200;
+					z-index: -123456;
+					opacity: 0;
+					transition: all .5s ease-in-out;
+				}
+
+				/* CONTENT ISOPEN */
+				#chatbotContainer .chatbox--active {
+					transform: translateY(-40px);
+					z-index: 123456;
+					opacity: 1;
+
+				}
+
+			
+				#chatbotContainer .send__button {
+					padding: 6px;
+					background: transparent;
+					border: none;
+					outline: none;
+					cursor: pointer;
+				}
+
+
+				/* HEADER */
+				#chatbotContainer .chatbox__header {
+					position: sticky;
+					top: 0;
+					background: orange;
+				}
+
+				/* MESSAGES */
+				#chatbotContainer .chatbox__messages {
+					margin-top: auto;
+					display: flex;
+					overflow-y: scroll;
+					flex-direction: column-reverse;
+				}
+
+				#chatbotContainer .messages__item {
+					margin-top: 10px;
+					background: #E0E0E0;
+					color: #323249;
+					padding: 8px 0; /* Removes side padding */
+					font-size: 12px; /* Smaller font size */
+					max-width: 100%; /* Allow message to take full width */
+					width: 100%; /* Full width */
+				}
+
+				#chatbotContainer .messages__item--operator {
+					margin-left: auto;
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					border-bottom-right-radius: 20px;
+					padding: 8px 0; /* Remove side padding */
+					max-width: 100%; /* Full width */
+					font-size: 12px; /* Match visitor font size */
+				}
+
+				#chatbotContainer .messages__item--visitor {
+					margin-right: auto;
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					border-bottom-right-radius: 20px;
+				}
+
+				/* FOOTER */
+				
+
+				#chatbotContainer .chatbox__support {
+					background: #f9f9f9;
+					height: 500px;
+					width: 350px;
+					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					border-bottom-left-radius: 20px;
+					border-bottom-right-radius: 20px;
+				}
+
+				/* HEADER */
+				#chatbotContainer .chatbox__header {
+					background: var(--primaryGradient);
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					padding: 15px 20px;
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					box-shadow: var(--primaryBoxShadow);
+				}
+
+				#chatbotContainer .chatbox__image--header {
+					margin-right: 10px;
+				}
+
+				#chatbotContainer .chatbox__heading--header {
+					font-size: 1.2rem;
+					color: white;
+				}
+
+				#chatbotContainer .chatbox__description--header {
+					font-size: .9rem;
+					color: white;
+				}
+
+				/* Messages */
+				#chatbotContainer .chatbox__messages {
+					padding: 0 20px;
+				}
+
+
+				#chatbotContainer .messages__item--operator {
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+					border-bottom-left-radius: 20px;
+					background: var(--primary);
+					color: white;
+				}
+
+				/* FOOTER */
+				#chatbotContainer .chatbox__footer {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+					padding: 10px 10px; /* Reduced padding */
+					background: var(--secondaryGradient);
+					box-shadow: var(--secondaryBoxShadow);
+					border-bottom-right-radius: 10px;
+					border-bottom-left-radius: 10px;
+					margin-top: 20px;
+				}
+
+				#chatbotContainer .chatbox__footer input {
+					width: 85%;
+					border: none;
+					padding: 8px 8px; /* Reduced padding for the input */
+					border-radius: 20px; /* You can adjust this for a smaller radius */
+					text-align: left;
+					font-size: 14px; /* Optionally adjust font size */
+				}
+
+				#chatbotContainer .chatbox__send--footer {
+					color: white;
+				}
+				#response {
+					margin-top: 20px;
+					padding: 10px;
+					border: 1px solid #2c2626;
+					background-color: #f9f9f9;
+				}
+			</style>
+			<script src="./app.js"></script>
+			<!--
+			<script>
+				async function sendMessage() {
+				const input = document.getElementById('input').value;
+				const responseBox = document.getElementById('response');
+
+				if (!input.trim()) {
+					responseBox.innerHTML = "Please enter a message.";
+					return;
+				}
+
+				responseBox.innerHTML = "Loading...";
+
+				const data = {
+					model: "gpt-3.5-turbo",
+					messages: [{ role: "user", content: input }],
+					max_tokens: 100
+				};
+
+				try {
+					const response = await fetch('/api/chatgpt', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(data)
+					});
+
+					const result = await response.json();
+					if (!response.ok) {
+						throw new Error(result.error.message || 'Error fetching response.');
+					}
+					responseBox.innerHTML = result.choices[0].message.content;
+				} catch (error) {
+					responseBox.innerHTML = "Error fetching response. Try again.";
+					console.error(error);
+				}
+			}
+
+
+			
+			</script>
+			
+			<script>
+				function toggleChat() {
+					const chatbox = document.getElementById('chatboxSupport');
+					const arrow = document.getElementById('arrow');
+					
+					// Check current display state
+					if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+						chatbox.style.display = 'flex'; // Show chatbox
+						arrow.innerHTML = '▲'; // Arrow up when open
+					} else {
+						chatbox.style.display = 'none'; // Hide chatbox
+						arrow.innerHTML = '▼'; // Arrow down when closed
+					}
+				}
+				</script>
+			-->
+
+
 
 
 
