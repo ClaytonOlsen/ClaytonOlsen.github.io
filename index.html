@@ -846,73 +846,7 @@
 				}
 			</style>
 			<script src="./app.js"></script>
-			<!--
-			<script>
-				async function sendMessage() {
-				const input = document.getElementById('input').value;
-				const responseBox = document.getElementById('response');
-
-				if (!input.trim()) {
-					responseBox.innerHTML = "Please enter a message.";
-					return;
-				}
-
-				responseBox.innerHTML = "Loading...";
-
-				const data = {
-					model: "gpt-3.5-turbo",
-					messages: [{ role: "user", content: input }],
-					max_tokens: 100
-				};
-
-				try {
-					const response = await fetch('/api/chatgpt', {
-						method: 'POST',
-						headers: {
-							'Content-Type': 'application/json',
-						},
-						body: JSON.stringify(data)
-					});
-
-					const result = await response.json();
-					if (!response.ok) {
-						throw new Error(result.error.message || 'Error fetching response.');
-					}
-					responseBox.innerHTML = result.choices[0].message.content;
-				} catch (error) {
-					responseBox.innerHTML = "Error fetching response. Try again.";
-					console.error(error);
-				}
-			}
-
-
-			
-			</script>
-			
-			<script>
-				function toggleChat() {
-					const chatbox = document.getElementById('chatboxSupport');
-					const arrow = document.getElementById('arrow');
-					
-					// Check current display state
-					if (chatbox.style.display === 'none' || chatbox.style.display === '') {
-						chatbox.style.display = 'flex'; // Show chatbox
-						arrow.innerHTML = '▲'; // Arrow up when open
-					} else {
-						chatbox.style.display = 'none'; // Hide chatbox
-						arrow.innerHTML = '▼'; // Arrow down when closed
-					}
-				}
-				</script>
-			-->
-
-
-
-
-
-
-
-				<!-- --------------------------------------------------  -->
+		
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
