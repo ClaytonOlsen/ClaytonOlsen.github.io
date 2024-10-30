@@ -430,6 +430,7 @@
 				
 						.view-more button:hover {
 							background-color: inherit;
+							cursor: pointer; 
 						}
 				
 						/* Style for the featured projects section */
@@ -501,7 +502,7 @@
 					<div class="projects-header">
 						<h2>Featured Projects</h2>
 						<div class="view-more">
-							<a id="viewMoreBtn" >view more &#8594;</a>
+							 <a id="viewMoreBtn" >view more &#8594;</a>
 						</div>
 					</div>
 
@@ -606,7 +607,6 @@
 					bottom: 30px; /* Distance from the bottom */
 					right: 5px; /* Distance from the right */
 					z-index: 999; /* Ensure it stays on top of other elements */
-					
 				}
 				.resize-img {
 					width: 50px;
@@ -614,6 +614,7 @@
 				}
 				#chatbotContainer .chatbox__button > * {
 					pointer-events: none; /* Prevent child elements from receiving hover events */
+					padding: 1vh;
 				}
 				
 				/* Button styling */
@@ -625,11 +626,14 @@
 					border: 1px solid white;
 					cursor: pointer;
 					color: white;
-					width: 15vw;
 					outline: none; 
 					box-shadow: none;
 					text-align: center;
 					justify-content: space-between; /* This will space out the contents evenly */
+					padding-top: 2vh;
+					padding-bottom: 2vh;
+					padding-left: 5vh;
+					padding-right: 5vh;
 				}
 				#chatbotContainer .chatbox__button:hover,
 				#chatbotContainer .chatbox__button:focus {
@@ -692,7 +696,7 @@
 				#chatbotContainer .chatbox__support {
 					display: flex;
 					flex-direction: column;
-					background: #eee;
+					background: #eee; 
 					height: 50vh; /* Height is 50% of the viewport height */
 					width: 20vw;
 					z-index: -123456;
